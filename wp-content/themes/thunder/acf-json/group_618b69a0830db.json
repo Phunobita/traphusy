@@ -1,0 +1,269 @@
+{
+    "key": "group_618b69a0830db",
+    "title": "Setting: Post Options",
+    "fields": [
+        {
+            "key": "field_618b6b711a89b",
+            "label": "Post Attribute",
+            "name": "post_attribute",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_save_meta": 0,
+            "choices": {
+                "recent": "Recent Posts",
+                "related": "Related Posts",
+                "select": "Select Posts"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "recent",
+            "layout": "horizontal",
+            "return_format": "value",
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0,
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_618b69b57224d",
+            "label": "Post Type",
+            "name": "post_type",
+            "type": "acfe_post_types",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618b6b711a89b",
+                        "operator": "==",
+                        "value": "recent"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "required_message": "",
+            "acfe_save_meta": 0,
+            "post_type": [
+                "post",
+                "project",
+                "solution",
+                "team",
+                "product"
+            ],
+            "field_type": "select",
+            "max": "",
+            "default_value": [],
+            "return_format": "name",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "search_placeholder": "Search",
+            "allow_custom": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0,
+            "choices": [],
+            "placeholder": "",
+            "layout": "",
+            "toggle": 0
+        },
+        {
+            "key": "field_618b6a4dc2b4b",
+            "label": "Category",
+            "name": "category",
+            "type": "acfe_taxonomy_terms",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618b6b711a89b",
+                        "operator": "==",
+                        "value": "recent"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_save_meta": 0,
+            "taxonomy": [
+                "category",
+                "department_tax",
+                "product_cat"
+            ],
+            "allow_terms": "",
+            "allow_level": "",
+            "field_type": "select",
+            "min": "",
+            "max": "",
+            "default_value": [],
+            "return_format": "object",
+            "ui": 1,
+            "allow_null": 1,
+            "placeholder": "",
+            "multiple": 1,
+            "ajax": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0,
+            "choices": [],
+            "search_placeholder": "",
+            "layout": "",
+            "toggle": 0,
+            "allow_custom": 0,
+            "other_choice": 0
+        },
+        {
+            "key": "field_618b6bb41a89c",
+            "label": "Select Posts",
+            "name": "select_posts",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618b6b711a89b",
+                        "operator": "==",
+                        "value": "select"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "instruction_placement": "",
+            "acfe_permissions": "",
+            "acfe_save_meta": 0,
+            "post_type": [
+                "post",
+                "project",
+                "solution",
+                "team",
+                "product"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "id",
+            "acfe_add_post": 0,
+            "acfe_edit_post": 0,
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "acfe_settings": "",
+            "acfe_validate": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_618b7a962b82e",
+            "label": "Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618b6b711a89b",
+                        "operator": "==",
+                        "value": "related"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_field": "",
+            "hide_label": "",
+            "hide_instructions": "",
+            "hide_required": "",
+            "acfe_permissions": "",
+            "acfe_save_meta": 0,
+            "instruction_placement": "",
+            "message": "- Only works in single post and archive page\r\n- Automatically select the relevant value",
+            "new_lines": "br",
+            "esc_html": 0,
+            "acfe_settings": "",
+            "acfe_field_group_condition": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "block"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 1,
+    "acfe_display_title": "",
+    "acfe_permissions": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1699858570,
+    "acfe_categories": {
+        "settings": "Settings"
+    }
+}
